@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Sanjeevani Clinic | Ayurveda & Panchkarma</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Sanjeevani Clinic Varanasi – Ayurvedic treatment for sugar, arthritis, digestive, respiratory, cancer support & sexual disorders. 25+ years experience.">
+<meta name="keywords" content="Ayurvedic clinic Varanasi, Panchkarma doctor Varanasi, Ayurveda sugar treatment, arthritis Ayurveda, Dr Ajit Singh">
+<meta name="author" content="Sanjeevani Clinic">
+<link rel="icon" type="image/png" href="icon3.png">
+<link rel="manifest" href="manifest.json">
+
+
+<style>
+
+:root{
+    --primary:#1b5e20;
+    --secondary:#2e7d32;
+    --light:#f4fff6;
+    --dark:#2b2b2b;
+    --card:#ffffff;
+}
+
+/* RESET */
+*{
+    box-sizing:border-box;
+}
+
+/* BODY */
+body{
+   
+     margin:0;
+    font-family: "Segoe UI", Arial, sans-serif;
+    background:#ffffff;
+    color:#333;
+}
+
+/* HEADER */
+header{
+    position:sticky;
+    top:0;
+    background:#ffffff;
+    box-shadow:0 4px 20px rgba(0,0,0,0.08);
+    z-index:1000;
+}
+
+nav{
+    max-width:1200px;
+    margin:auto;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:16px 20px;
+}
+
+nav h2{
+    margin:0;
+    color:var(--primary);
+}
+
+nav a{
+    text-decoration:none;
+    margin-left:18px;
+    color:var(--primary);
+    font-weight:600;
+    position:relative;
+}
+
+nav a::after{
+    content:"";
+    position:absolute;
+    left:0;
+    bottom:-6px;
+    width:0;
+    height:2px;
+    background:var(--secondary);
+    transition:.3s;
+}
+
+nav a:hover::after{
+    width:100%;
+}
+
+/* HERO */
+.hero{
+    background:linear-gradient(120deg,#e8f5e9,#ffffff);
+    padding:90px 20px;
+}
+
+.hero-content{
+    max-width:1200px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:1.1fr 0.9fr;
+    gap:40px;
+    align-items:center;
+}
+
+.hero h1{
+    font-size:44px;
+    color:var(--primary);
+    margin-bottom:15px;
+}
+
+.hero p{
+    font-size:18px;
+    color:#444;
+}
+
+/* BUTTON */
+.btn{
+    display:inline-block;
+    margin-top:25px;
+    background:var(--secondary);
+    color:white;
+    padding:14px 32px;
+    border-radius:50px;
+    text-decoration:none;
+    font-weight:600;
+    transition:.3s;
+}
+
+.btn:hover{
+    background:var(--primary);
+    transform:translateY(-2px);
+}
+
+/* SECTIONS */
+section{
+    max-width:1200px;
+    margin:auto;
+    padding:80px 20px;
+}
+
+section h2{
+    font-size:34px;
+    color:var(--primary);
+    margin-bottom:30px;
+}
+
+/* GRID */
+.treatments{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:30px;
+}
+
+/* CARD */
+.card{
+    background:var(--card);
+    border-radius:18px;
+    padding:28px;
+    box-shadow:0 12px 35px rgba(0,0,0,0.08);
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-6px);
+    box-shadow:0 20px 45px rgba(0,0,0,0.12);
+}
+
+/* DOCTOR */
+.doctor{
+    display:grid;
+    grid-template-columns:0.9fr 1.1fr;
+    gap:40px;
+    align-items:center;
+}
+
+.doctor img{
+    width:100%;
+    max-width:320px;
+    border-radius:25px;
+    box-shadow:0 15px 40px rgba(0,0,0,0.15);
+}
+
+/* FAQ */
+#faq .card{
+    margin-bottom:25px;
+    border-left:5px solid var(--secondary);
+}
+
+/* REVIEWS */
+#reviews .card{
+    text-align:center;
+    font-style:italic;
+}
+
+#reviews strong{
+    display:block;
+    margin-top:12px;
+    color:var(--primary);
+}
+
+/* CONTACT */
+#contact p{
+    font-size:17px;
+    margin:10px 0;
+}
+
+/* MAP */
+iframe{
+    margin-top:30px;
+    border-radius:20px;
+    box-shadow:0 12px 30px rgba(0,0,0,0.15);
+}
+
+/* FOOTER */
+footer{
+    background:var(--primary);
+    color:white;
+    text-align:center;
+    padding:30px 15px;
+    font-size:15px;
+}
+
+/* FLOATING BUTTONS */
+.fixed{
+    position:fixed;
+    bottom:20px;
+    right:20px;
+    z-index:2000;
+}
+
+.fixed a{
+    display:block;
+    margin-top:12px;
+    padding:14px 22px;
+    border-radius:50px;
+    color:white;
+    text-decoration:none;
+    font-weight:600;
+    box-shadow:0 10px 25px rgba(0,0,0,0.25);
+    transition:.3s;
+}
+
+.fixed a:hover{
+    transform:scale(1.05);
+}
+
+.call{background:var(--primary);}
+.whatsapp{background:#25D366;}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+    .hero-content,
+    .doctor{
+        grid-template-columns:1fr;
+        text-align:center;
+    }
+
+    .hero h1{
+        font-size:36px;
+    }
+
+    nav{
+        flex-direction:column;
+        gap:10px;
+    }
+}
+.nav-logo{
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+.nav-logo img{
+    width:48px;
+    height:48px;
+    border-radius:50%;
+}
+
+.logo-title{
+    display:block;
+    font-size:20px;
+    font-weight:700;
+    color:#1b5e20;
+}
+
+.logo-sub{
+    display:block;
+    font-size:12px;
+    letter-spacing:1px;
+    color:#4e6f52;
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+<nav>
+<div class="nav-logo">
+    <img src="icon3.png" alt="Sanjeevani Clinic">
+    <div>
+        <span class="logo-title">Sanjeevani Clinic</span>
+        <span class="logo-sub">Ayurveda & Panchkarma</span>
+    </div>
+</div>
+
+<div>
+<a href="#home">Home</a>
+<a href="#doctor">Doctor</a>
+<a href="#treatments">Treatments</a>
+<a href="#contact">Contact</a>
+</div>
+</nav>
+</header>
+
+<div class="hero" id="home">
+<div class="hero-content">
+<div>
+<h1>Authentic Ayurvedic Healing<br>स्वस्थ जीवन की ओर</h1>
+
+<p>
+25+ Years of Authentic Ayurveda, Panchkarma & Nadi Pariksha  
+<br><br>
+<strong>संजीवनी क्लिनिक – प्राकृतिक आयुर्वेदिक उपचार</strong>
+</p>
+<a href="#appointment" class="btn">Book Appointment</a>
+</div>
+<div>
+<img src="clinic.jpg" alt="Clinic Image" style="width:100%;border-radius:20px;">
+</div>
+</div>
+</div>
+
+<section id="doctor">
+<h2>Meet Our Doctor</h2>
+<br></br>
+<div class="doctor">
+<img src="doctor.jpg" alt="Dr Ajit Singh">
+<div>
+<h3>Dr. Ajit Singh</h3>
+<p>
+<strong>M.D. Medicine (Ayurveda)</strong><br>
+Panchkarma & Nadi Specialist
+</p>
+<p>
+Over <strong>25 years</strong> of experience in treating chronic and complex diseases
+through authentic Ayurvedic principles.
+</p>
+<p>
+25 वर्षों का अनुभव – आयुर्वेद द्वारा स्थायी उपचार।
+</p>
+</div>
+</div>
+</section>
+
+<section id="treatments">
+<h2>Specialized Treatments</h2>
+<br></br>
+<div class="treatments">
+<div class="card">पेट रोग / Digestive Disorders</div>
+<div class="card">शुगर / Diabetes</div>
+<div class="card">श्वसन रोग / Respiratory Diseases</div>
+<div class="card">गठिया / Arthritis & Joint Pain</div>
+<div class="card">कैंसर सहायक उपचार</div>
+<div class="card">नपुंसकता / Sexual Disorders</div>
+</div>
+</section>
+<section id="faq">
+<h2>Frequently Asked Questions (FAQ)</h2>
+<br></br>
+<div class="card">
+<strong>Q. Kya Ayurveda se sugar control ho sakta hai?</strong>
+<p>Haan, prakriti ke hisab se ayurvedic treatment se sugar control aur complications kam ki ja sakti hain.</p>
+</div>
+
+<div class="card">
+<strong>Q. Treatment me kitna time lagta hai?</strong>
+<p>Har patient alag hota hai. Disease aur body type ke hisab se duration decide hota hai.</p>
+</div>
+
+<div class="card">
+<strong>Q. Kya Panchkarma safe hai?</strong>
+<p>Haan, doctor supervision me Panchkarma bilkul safe aur effective hota hai.</p>
+</div>
+
+<div class="card">
+<strong>Q. Kya online consultation available hai?</strong>
+<p>Haan, WhatsApp aur call ke through consultation available hai.</p>
+</div>
+</section>
+<section id="reviews">
+<h2>What Our Patients Say</h2>
+<br></br>
+<div class="treatments">
+<div class="card">
+⭐⭐⭐⭐⭐
+<p>Doctor bahut experienced hain. Sugar me kaafi improvement hua.</p>
+<strong>– Google Review</strong>
+</div>
+
+<div class="card">
+⭐⭐⭐⭐⭐
+<p>Gathiya ke pain me Panchkarma se bahut rahat mili.</p>
+<strong>– Google Review</strong>
+</div>
+
+<div class="card">
+⭐⭐⭐⭐⭐
+<p>Best Ayurvedic clinic in Gurubagh area.</p>
+<strong>– Google Review</strong>
+</div>
+</div>
+
+<p>
+<a class="btn" href="https://maps.app.goo.gl/Z7A9SUyxYUZ5cK3j8" target="_blank">
+Read More Reviews on Google
+</a>
+</p>
+</section>
+<section id="gallery">
+<h2>Clinic Gallery</h2>
+<br></br>
+<div class="treatments">
+<div class="card"><img src="clinic1.jpg" width="100%"></div>
+<div class="card"><img src="clinic2.jpg" width="100%"></div>
+<div class="card"><img src="clinic3.jpg" width="100%"></div>
+</div>
+</section>
+
+
+<section id="appointment">
+<h2>Book Appointment</h2>
+<p>Click below to book your appointment directly on WhatsApp.</p>
+<a class="btn" href="https://wa.me/919450323011">Book on WhatsApp</a>
+</section>
+
+<section id="contact">
+<h2>Contact Us</h2>
+<p><strong>Address1:</strong> Shri Nagar Colony (In front of Batra Caterers), Gurubagh, Varanasi</p>
+<p><strong>Phone:</strong> 9450323011 | 8787092974</p>
+<p><strong>Timings:</strong> Mon–Sat 9:00–1:30</p>
+<p><strong>Address 2:</strong> K 56/71 A, Ausanganj Chauraha (Inside Jawahir Seth Katra) Varanasi</p>
+<p><strong>Phone:</strong> 9450323011 | 8787092974</p>
+<p><strong>Timings:</strong> Mon–Sat 5:00–8:30</p>
+</section>
+<iframe 
+src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d24905.556624690787!2d82.97368771325799!3d25.329912863254048!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x398e2e010710f001%3A0xfc4d802d3922e9c2!2sSanjeevni%20Clinic!5e1!3m2!1sen!2sin!4v1766597030619!5m2!1sen!2sin"
+width="100%" 
+height="300" 
+style="border:0; border-radius:15px;" 
+allowfullscreen="" 
+loading="lazy">
+</iframe>
+
+<footer>
+<p>© 2025 Sanjeevani Clinic | Ayurveda with Trust</p>
+</footer>
+
+
+<div class="fixed">
+<a class="call" href="tel:9450323011">📞 Call</a>
+<a class="whatsapp" href="https://wa.me/919450323011">💬 WhatsApp</a>
+</div>
+</body>
+</html>
